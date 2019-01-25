@@ -1,2 +1,27 @@
+/* line 1, ../../prywatne/js cwiczenia/sleep_buddy/sleep_friend/css/style.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* line 8, ../../prywatne/js cwiczenia/sleep_buddy/sleep_friend/css/style.scss */
+body {
+  width: 640px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10vw;
+  width: 80vw;
+  height: 100vh;
+  line-height: 50px; }
+  /* line 19, ../../prywatne/js cwiczenia/sleep_buddy/sleep_friend/css/style.scss */
+  body p {
+    font-size: 32px; }
+  /* line 24, ../../prywatne/js cwiczenia/sleep_buddy/sleep_friend/css/style.scss */
+  body button {
+    padding: 10px 20px;
+    width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

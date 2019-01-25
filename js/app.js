@@ -2,12 +2,12 @@ $(function (){
     var body = $('body');
 
     function chooseWho () {
-        var questionWhy = $('<p>Z kim klikam?</p>');
+        var questionWhy = $('<p class="text">Z kim klikam?</p>');
         body.append(questionWhy);
         var divCointainer = $('<div class="container">');
-        questionWhy.append(divCointainer);
-        var michal = $('<button id="michal">Michał</button>')
-        var hania = $('<button id="hania">Hania</button>')
+        body.append(divCointainer);
+        var michal = $('<button id="michal" class="person">Michał</button>')
+        var hania = $('<button id="hania" class="person">Hania</button>')
         divCointainer.append(michal);
         divCointainer.append(hania);
         michal.on('click', function() {
@@ -20,14 +20,19 @@ $(function (){
 
     function michalChoose () {
         body.empty();
-        var questionWhat = $('<p>Wybierz opcję</p>');
+        var questionWhat = $('<p class="text">Wybierz opcję</p>');
         body.append(questionWhat);
         var divCointainer = $('<div class="person-container">');
         body.append(divCointainer);
+        var randomPlush = $('<button id="random-plush">Losowanko</button>')
         var oneBig = $('<button id="one-big">Jedna duża maskotka</button>');
         var twoSmall = $('<button id="two-small">Dwie małe maskotki</button>');
+        divCointainer.append(randomPlush);
         divCointainer.append(oneBig);
         divCointainer.append(twoSmall);
+        randomPlush.on('click', function () {
+            plushSelector("Michal");
+        })
         oneBig.on('click', function () {
             onePlushMichal ();
         })
@@ -36,16 +41,38 @@ $(function (){
         })
     }
 
+    function plushSelector (name) {
+        var random = Math.ceil(Math.random()*3);
+        if (name==='Michal'){
+            if (random===1) {
+                onePlushMichal()
+            } else {
+                twoPlushMichal()
+            }
+        } else {
+            if (random===1) {
+                onePlushHania()
+            } else {
+                twoPlushHania()
+            }
+        }
+    }
+
     function haniaChoose () {
         body.empty();
         var questionWhat = $('<p>Wybierz opcję</p>');
         body.append(questionWhat);
         var divCointainer = $('<div class="person-container">');
         body.append(divCointainer);
+        var randomPlush = $('<button id="random-plush">Losowanko</button>')
         var oneBig = $('<button id="one-big">Jedna duża maskotka</button>');
         var twoSmall = $('<button id="two-small">Dwie małe maskotki</button>');
+        divCointainer.append(randomPlush);
         divCointainer.append(oneBig);
         divCointainer.append(twoSmall);
+        randomPlush.on('click', function () {
+            plushSelector("Hania");
+        })
         oneBig.on('click', function () {
             onePlushHania ();
         })
@@ -53,6 +80,8 @@ $(function (){
             twoPlushHania ();
         })
     }
+
+
 
     function onePlushMichal () {
         body.empty();
@@ -67,7 +96,7 @@ $(function (){
         body.empty();
         var bigBuddy = $('<p>Dziś śpi z tobą:</p>');
         body.append(bigBuddy);
-        var plushArray = ['Pan Sowa', 'Snake', 'Pikaczu', 'Złotek', 'Seledynek']
+        var plushArray = ['Pan Sowa', 'Pan Sowa', 'Snake', 'Pikaczu', 'Złotek', 'Seledynek', 'Hedwiga', 'Om Nom', 'Bubo', 'Oskar']
         randomTwoPlush(plushArray);
         reload();
     }
@@ -76,7 +105,7 @@ $(function (){
         body.empty();
         var bigBuddy = $('<p>Dziś śpi z tobą:</p>');
         body.append(bigBuddy);
-        var plushArray = ['Akita', 'Duża zabawka1', 'Pingwinka'];
+        var plushArray = ['Akita', 'Kapeć'];
         randomPlush(plushArray);
         reload();
     }
@@ -85,7 +114,7 @@ $(function (){
         body.empty();
         var bigBuddy = $('<p>Dziś śpi z tobą:</p>');
         body.append(bigBuddy);
-        var plushArray = ['Poma', 'Poma', 'Poma', 'Kotek', 'Buka']
+        var plushArray = ['Poma', 'Poma', 'Fałszywy Poma', 'Pimpek', 'Kleik', 'Picik', 'Grubas', 'Ping']
         randomTwoPlush(plushArray);
         reload();
     }
