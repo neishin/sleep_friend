@@ -42,7 +42,7 @@ $(function (){
     }
 
     function plushSelector (name) {
-        var random = Math.ceil(Math.random()*3);
+        var random = Math.ceil(Math.random()*5);
         if (name==='Michal'){
             if (random===1) {
                 onePlushMichal()
@@ -114,7 +114,7 @@ $(function (){
         body.empty();
         var bigBuddy = $('<p>Dziś śpi z tobą:</p>');
         body.append(bigBuddy);
-        var plushArray = ['Poma', 'Poma', 'Fałszywy Poma', 'Pimpek', 'Kleik', 'Picik', 'Grubas', 'Ping']
+        var plushArray = ['Poma', 'Poma', 'Fałszywy Poma', 'Pimpek', 'Picik', 'Grubas', 'Ping', 'Buka']
         randomTwoPlush(plushArray);
         reload();
     }
