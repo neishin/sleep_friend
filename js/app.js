@@ -96,7 +96,7 @@ $(function (){
         body.empty();
         var bigBuddy = $('<p>Dziś śpi z tobą:</p>');
         body.append(bigBuddy);
-        var plushArray = ['Pan Sowa', 'Pan Sowa', 'Snake', 'Pikaczu', 'Złotek', 'Seledynek', 'Hedwiga', 'Om Nom', 'Bubo', 'Oskar']
+        var plushArray = ['Pan Sowa', 'Pan Sowa', 'Snake', 'Pikaczu', 'Złotek', 'Seledynek', 'Hedwiga', 'Om Nom', 'Bubo', 'Oskar', 'Bruce', 'Piplup']
         randomTwoPlush(plushArray);
         reload();
     }
@@ -114,7 +114,7 @@ $(function (){
         body.empty();
         var bigBuddy = $('<p>Dziś śpi z tobą:</p>');
         body.append(bigBuddy);
-        var plushArray = ['Poma', 'Poma', 'Fałszywy Poma', 'Pimpek', 'Picik', 'Grubas', 'Ping', 'Buka']
+        var plushArray = ['Poma', 'Poma', 'Fałszywy Poma', 'Picik', 'Grubas', 'Ping', 'Buka', 'Pusheen', 'Chuck']
         randomTwoPlush(plushArray);
         reload();
     }
